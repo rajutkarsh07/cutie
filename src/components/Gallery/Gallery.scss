@@ -22,3 +22,18 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .gallery {
+    .gallery-photos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .gallery {
+    .gallery-photos {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
