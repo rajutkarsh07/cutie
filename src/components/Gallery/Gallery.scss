@@ -1,0 +1,24 @@
+.gallery {
+  background-color: #fffbe9;
+
+  h1 {
+    padding-top: 30px;
+    margin: 0;
+    font-size: 60px;
+    text-align: center;
+    color: #9f2b2b;
+  }
+
+  .gallery-photos {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    row-gap: 30px;
+
+    img {
+      width: 300px;
+      // border: 2px solid black;
+    }
+  }
+}
