@@ -4,6 +4,8 @@ import pandas as pd
 
 app = Flask(__name__)
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 # Load the pre-trained model
 # model = pkl.load(open("model.pkl", "rb"))
 

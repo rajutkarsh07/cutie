@@ -40,3 +40,20 @@ npm install
 npm run dev
 ```
 
+## for backend
+
+```
+cd server
+```
+
+```
+pip install flask
+
+pip install pandas
+
+python copy2.py
+```
+
+for dataset refer this link
+
+https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
