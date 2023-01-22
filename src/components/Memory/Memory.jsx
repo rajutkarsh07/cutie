@@ -49,39 +49,39 @@ const Memory = () => {
           dash={dash}
         />
         <MemoryCard
-          heading="Saw each other"
+          heading="Talked first time"
           img={img2}
-          date="23 Jan, 2023"
+          date="24 Jan, 2023"
           dash={dash}
         />
         <MemoryCard
-          heading="Saw each other"
+          heading="First date"
           img={img3}
-          date="23 Jan, 2023"
+          date="31 Jan, 2023"
           dash={dash}
         />
         <MemoryCard
-          heading="Saw each other"
+          heading="Confessed"
           img={img4}
-          date="23 Jan, 2023"
+          date="14 Feb, 2023"
           dash={dash}
         />
         <MemoryCard
-          heading="Saw each other"
+          heading="First Hug"
           img={img5}
-          date="23 Jan, 2023"
+          date="24 Feb, 2023"
           dash={dash}
         />
         <MemoryCard
-          heading="Saw each other"
+          heading="First Kiss"
           img={img6}
-          date="23 Jan, 2023"
+          date="26 Feb, 2023"
           dash={dash}
         />
         <MemoryCard
-          heading="Saw each other"
+          heading="Make Love"
           img={img7}
-          date="23 Jan, 2023"
+          date="13 June, 2023"
           dash={dash}
         />
         <MemoryCard heading="Happy" img={img8} date="Forever" dash={dash} />

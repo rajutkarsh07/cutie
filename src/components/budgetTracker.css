@@ -1,0 +1,44 @@
+.flexBox {
+  display: flex;
+  margin-top: 5%;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.expense-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.expensesList {
+  width: 45%;
+}
+
+input {
+  width: 200%;
+  padding: 2%;
+  margin-top: 5px;
+}
+
+.exp-desc {
+  width: 200%;
+  padding: 2%;
+  margin-top: 5px;
+}
+
+.submit {
+  margin-left: 75%;
+  padding: 2%;
+  margin-top: 5px;
+  width: 50%;
+}
+
+.expense-item {
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+}

@@ -19,8 +19,11 @@ const Home = () => {
           <Link exact="true" to="/bucketlist" className="btn-page">
             Bucket List
           </Link>
-          <Link exact="true" to="/budget" className="btn-page">
+          <Link exact="true" to="/budgettracker" className="btn-page">
             Budget Tracker
+          </Link>
+          <Link exact="true" to="/bucketlist" className="btn-page">
+            Bucket List
           </Link>
         </div>
       </div>
