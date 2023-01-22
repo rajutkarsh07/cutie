@@ -1,5 +1,8 @@
 import React from "react";
+import "./budgetlist.css";
 import useBucketListStore from "../stores/bucketListStore";
+import { useNavigate } from "react-router-dom";
+import { BiArrowBack } from "react-icons/bi";
 
 const BucketList = () => {
   const addListItemHandler = useBucketListStore((state) => state.addItem);
@@ -39,25 +42,36 @@ const BucketList = () => {
     }
   }
 
+  const Navigate = useNavigate();
+  const back = (e) => {
+    e.preventDefault();
+    Navigate(-1);
+  };
+
   return (
-    <>
-      <h2>Bucket List</h2>
-      <div className="bucketList">
-        {listItems.map((item, id) => (
-          <div
-            className="bucketListItem"
-            id={id}
-            key={id}
-            onClick={() => toggleItem(id)}
-          >
-            <p>{item}</p>
-          </div>
-        ))}
+    <div className="bucket">
+      <div className="btn" onClick={back}>
+        <BiArrowBack />
       </div>
-      <button onClick={addItemHandler}>Add Item in the list</button>
-      <button onClick={resetHandler}>Reset/Clear List</button>
-      {console.log(listItems)}
-    </>
+      <div className="content">
+        <h2>Bucket List</h2>
+        <div className="bucketList">
+          {listItems.map((item, id) => (
+            <div
+              className="bucketListItem"
+              id={id}
+              key={id}
+              onClick={() => toggleItem(id)}
+            >
+              <p>{item}</p>
+            </div>
+          ))}
+        </div>
+        <button onClick={addItemHandler}>Add Item in the list</button>
+        <button onClick={resetHandler}>Reset/Clear List</button>
+        {console.log(listItems)}
+      </div>
+    </div>
   );
 };
 

@@ -1,0 +1,49 @@
+.bucket {
+  background: #fffbe9;
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bucket h2 {
+  text-align: center;
+  font-size: 50px;
+  color: #9f2b2b;
+}
+
+.bucket button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  font-family: inherit;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  width: 228px;
+  height: 50px;
+
+  background: #da2232;
+  border-radius: 40px;
+  transition: all 0.3s;
+}
+
+.bucket button:hover {
+  background: #bc0414;
+  transform: translateY(-6px);
+}
+
+.bucket .bucketListItem {
+  padding-left: 20px;
+  font-size: 20px;
+}

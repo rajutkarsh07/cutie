@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import useBudgetStore from "../stores/budgetStore";
+import { useNavigate } from "react-router-dom";
+import { BiArrowBack } from "react-icons/bi";
 import "./budgetTracker.css";
 
 const BudgetTracker = () => {
@@ -58,51 +60,65 @@ const BudgetTracker = () => {
     clear();
   }
 
+  const Navigate = useNavigate();
+  const back = (e) => {
+    e.preventDefault();
+    Navigate(-1);
+  };
+
   return (
-    <div>
-      <button onClick={budgetSubmit} className="btn-primary">
-        Enter your monthly budget
-      </button>
-      <button onClick={resetHandler} className="btn-primary">
-        Reset/Clear
-      </button>
-      <h2>Total Monthly Budget: {prevTotalBudget}</h2>
-      <h2>Money Spent: {moneySpent}</h2>
+    <div className="budget">
+      <div className="btn" onClick={back}>
+        <BiArrowBack />
+      </div>
 
-      <div className="warning">{warning}</div>
-      <div className="flexBox">
-        <form className="expense-container" onSubmit={addExpense}>
-          <textarea
-            rows={5}
-            type="text"
-            className="exp-desc"
-            placeholder="Expense Desc"
-            onChange={(e) => setExpenseDesc(e.target.value)}
-            value={expenseDesc}
-          />
-          <input
-            type="number"
-            className="exp-amount"
-            placeholder="Add expense amount"
-            onChange={(e) => setExpense(e.target.value)}
-            value={expense}
-          />
-          <button type="submit" className="submit">
-            Add Expense
-          </button>
-        </form>
+      <div className="content">
+        <h2>Budget Tracker</h2>
+        <button onClick={budgetSubmit} className="btn-primary">
+          Enter your monthly budget
+        </button>
+        <button onClick={resetHandler} className="btn-primary">
+          Reset/Clear
+        </button>
+        <h3>Total Monthly Budget: {prevTotalBudget}</h3>
+        <h3>Money Spent: {moneySpent}</h3>
 
-        <div className="expensesList">
-          <h4>Expenses List</h4>
-          {expensesList.map((expense, index) => {
-            return (
-              <div className="expense-item" key={index}>
-                <p>{expense.expenseDesc}</p>
-                <p>{expense.expense}</p>
-                <hr />
-              </div>
-            );
-          })}
+        <div className="warning">{warning}</div>
+        <div className="flexBox">
+          <form className="expense-container" onSubmit={addExpense}>
+            <textarea
+              rows={5}
+              type="text"
+              className="exp-desc"
+              placeholder="Expense Desc"
+              onChange={(e) => setExpenseDesc(e.target.value)}
+              value={expenseDesc}
+              cols="40"
+            />
+            <input
+              type="number"
+              className="exp-amount"
+              placeholder="Add expense amount"
+              onChange={(e) => setExpense(e.target.value)}
+              value={expense}
+            />
+            <button type="submit" className="submit">
+              Add Expense
+            </button>
+          </form>
+
+          <div className="expensesList">
+            <h4>Expenses List</h4>
+            {expensesList.map((expense, index) => {
+              return (
+                <div className="expense-item" key={index}>
+                  <p>{expense.expenseDesc}</p>
+                  <p>{expense.expense}</p>
+                  <hr />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

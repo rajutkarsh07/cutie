@@ -1,3 +1,7 @@
+.budget {
+  background: #fffbe9;
+}
+
 .flexBox {
   display: flex;
   margin-top: 5%;
@@ -14,17 +18,45 @@
   width: 45%;
 }
 
-input {
-  width: 200%;
-  padding: 2%;
-  margin-top: 5px;
+textarea {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 16px;
+  gap: 10px;
+
+  /* width: 300px; */
+  /* height: 40px; */
+
+  border: 2px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 20px;
 }
 
+input {
+  /* width: 200%; */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 16px;
+  gap: 10px;
+
+  width: 300px;
+  height: 40px;
+  font-family: inherit;
+  border: 2px solid #e6e6e6;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+/* 
 .exp-desc {
   width: 200%;
   padding: 2%;
   margin-top: 5px;
-}
+} */
 
 .submit {
   margin-left: 75%;
@@ -41,4 +73,47 @@ input {
 .warning {
   color: red;
   font-weight: bold;
+}
+
+.budget button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  font-family: inherit;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  width: 228px;
+  height: 50px;
+
+  background: #da2232;
+  border-radius: 40px;
+  transition: all 0.3s;
+}
+
+.budget button:hover {
+  background: #bc0414;
+  transform: translateY(-6px);
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+.expensesList {
+  font-size: 22px;
 }
