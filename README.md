@@ -1,6 +1,6 @@
 # cutie
 
-A Express, React and Node web application that includes the following features:
+A MongoDB, Express, React and Node web application that includes the following features:
 
 - Gallery: A place where users can store their images
 - Memories: A place where users have all their memories with dates
